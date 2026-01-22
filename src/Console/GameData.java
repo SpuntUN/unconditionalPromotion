@@ -1,8 +1,8 @@
-package Rest;
+package Console;
 
-import Console.Main;
 import Locations.Location;
 import NPCs.NPC;
+import Rest.Item;
 import com.google.gson.Gson;
 
 import java.io.InputStream;
