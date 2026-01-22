@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class GameData {
 
     public ArrayList<Item> items;
-    public ArrayList<NPC> characters;
+    public ArrayList<NPC> NPCs;
     public ArrayList<Location> locations;
 
     /**
