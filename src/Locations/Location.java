@@ -12,4 +12,17 @@ public class Location {
     public String getId() {
         return id;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<String> getNeighbours() {
+        return neighbours;
+    }
+
+    @Override
+    public String toString() {
+        return id;
+    }
 }

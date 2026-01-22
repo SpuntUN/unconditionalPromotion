@@ -24,22 +24,22 @@ public class GameData {
     /**
      * Loads game data from a JSON file.
      * @param resourcePath path to the resource file
-     * @return a GameData object filled with the loaded data
+     * @return a game.GameData object filled with the loaded data
      */
     public static GameData loadGameDataFromResources(String resourcePath) {
-       //Vytvoření objektu pro práci s JSON souborem
+        //Vytvoření objektu pro práci s JSON souborem
         Gson gson = new Gson();
 
         //Načtení souboru gamedata.json, musí být ve složce res/resources, ta musí být označena jako resource složka projektu
-        try (InputStream is = Main.class.getResourceAsStream(resourcePath)) {
+        try (InputStream is = GameData.class.getResourceAsStream(resourcePath)) {
 
-        //Zde ověřujeme, zdali soubor existuje
+            //Zde ověřujeme, zdali soubor existuje
             if (is == null) {
                 throw new IllegalStateException("Nenalezen resource: " + resourcePath +
                         " (zkontrolujte, že soubor je v src/main/resources).");
             }
 
-        //Přečte celý JSON a vytvoří instanci GameData, naplní vlastnosti podle názvů klíčů v JSONU, vrátí se hotová třída GameData
+            //Přečte celý JSON a vytvoří instanci game.GameData, naplní vlastnosti podle názvů klíčů v JSONU, vrátí se hotová třída game.GameData
             return gson.fromJson(
                     new InputStreamReader(is, StandardCharsets.UTF_8),
                     GameData.class
