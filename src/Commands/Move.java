@@ -18,7 +18,6 @@ public class Move extends Command{
 
     @Override
     public String execute(String command) {
-
         for (Location l : locations){
             if (command.equalsIgnoreCase(l.getName())){
                 String id = l.getId();
