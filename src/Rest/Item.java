@@ -5,4 +5,11 @@ public class Item {
     private String name;
     private String description;
 
+    public String getName(){
+        return name;
+    }
+
+    public String getId() {
+        return id;
+    }
 }

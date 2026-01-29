@@ -29,7 +29,7 @@ public class Move extends Command{
                 }
             }
         }
-        return "Not location with name " + command + " has been found";
+        return "No location with the name \"" + command + "\" has been found";
     }
 
     @Override

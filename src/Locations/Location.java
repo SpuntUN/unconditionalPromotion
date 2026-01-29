@@ -21,6 +21,10 @@ public class Location {
         return neighbours;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     @Override
     public String toString() {
         return id;
