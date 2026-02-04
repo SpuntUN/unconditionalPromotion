@@ -55,9 +55,6 @@ public class Game {
             for (String neighbourId : l.getNeighboursId()){
                 l.addNeighbour(gameData.findLocation(neighbourId));
             }
-            for (String itemId : l.getStoredId()){
-                l.addStored(gameData.findItem(itemId));
-            }
         }
     }
 

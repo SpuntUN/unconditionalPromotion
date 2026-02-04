@@ -17,8 +17,9 @@ public class Move extends Command{
     @Override
     public String execute(String command) {
         Location current = player.getLocation();
-        if (current.equalsNeighbourName(command)){
+        if (current.findNeighbour(command) != null){
             player.setLocation(current.findNeighbour(command));
+            return "Moved to " + player.getLocation().getName();
         }
         return "No location with the name \"" + command + "\" has been found";
     }

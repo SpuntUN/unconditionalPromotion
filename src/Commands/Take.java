@@ -1,5 +1,6 @@
 package Commands;
 
+import Locations.Location;
 import Rest.Item;
 import Rest.Player;
 
@@ -8,21 +9,18 @@ import java.util.ArrayList;
 public class Take extends Command {
 
     Player player;
-    public ArrayList<Item> items;
 
-    public Take(Player player, ArrayList<Item> items){
+    public Take(Player player){
         this.player = player;
-        this.items = items;
     }
 
     @Override
     public String execute(String command) {
-        for (Item i : items){
-            if (command.equalsIgnoreCase(i.getName()) && player.getLocation().getNeighbours().contains(i.getId())){
-                player.getInventory().add(i);
-                player.getLocation().getNeighbours().remove(i.getId());
-                return i.getName() + " has been added to inventory";
-            }
+        Location current = player.getLocation();
+        if (current.findItem(command) != null){
+            Item addedItem = current.findItem(command);
+            player.getInventory().add(current.findItem(command));
+            return addedItem.getName() + " added to inventory";
         }
         return "No item with the name \"" + command + "\" has been found";
     }

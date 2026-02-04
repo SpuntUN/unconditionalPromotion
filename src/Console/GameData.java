@@ -17,7 +17,6 @@ import java.util.ArrayList;
  */
 public class GameData {
 
-    public ArrayList<Item> items;
     public ArrayList<NPC> NPCs;
     public ArrayList<Location> locations;
 
@@ -65,14 +64,6 @@ public class GameData {
         throw new IllegalArgumentException("Neexistuje lokace s id: " + id);
     }
 
-    public Item findItem(String id) {
-        for (Item i : items) {
-            if (i.getId().equals(id)){
-                return i;
-            }
-        }
-        throw new IllegalArgumentException("Neexistuje item  s id: " + id);
-    }
 
 
 }

@@ -7,6 +7,7 @@ public class Inventory {
     private int capacity;
 
     public Inventory(int capacity) {
+        items = new ArrayList<>();
         this.capacity = capacity;
     }
 

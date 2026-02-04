@@ -1,3 +1,5 @@
+package Rest;
+
 import Console.Game;
 
 public class Main {

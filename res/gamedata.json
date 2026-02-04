@@ -1,32 +1,5 @@
 {
-  "items": [
-    {
-      "id": "item_coffee",
-      "name": "cheap coffee",
-      "description": "Barely hot, barely drinkable, but hushes the voices."
-    },
-    {
-      "id": "item_crowbar",
-      "name": "crowbar",
-      "description": "Courtesy of mr.Freeman."
-    },
-    {
-      "id": "item_bag_of_coal",
-      "name": "bag of coal",
-      "description": "Contains few chunks of coal, along with fur..."
-    },
-    {
-      "id": "item_magazine",
-      "name": "magazine \"Interstellar Navigation for Dummies\"",
-      "description": "The bare minimum of astrodynamics a kindergarten can ask for."
-    },
-    {
-      "id": "item_space_suit ",
-      "name": "space suit",
-      "description": "Developed by the finest engineers above the age of 9."
-    }
-  ],
-  "NPCs" : [
+  "NPCs": [
     {
       "id": "npc_dead_captain",
       "name": "captain",
@@ -48,57 +21,104 @@
       "id": "location_bridge",
       "name": "Bridge",
       "description": "A clean room full of computers and one large window. Also the captain is still dead.",
-      "stored": ["item_magazine"],
-      "neighbours": ["location_hall_north"]
+      "stored": [
+        {
+          "id": "item_magazine",
+          "name": "magazine \"Interstellar Navigation for Dummies\"",
+          "description": "The bare minimum of astrodynamics a kindergarten can ask for."
+        }
+      ],
+      "neighboursId": ["location_hall_north"],
+      "neighbours": []
     },
     {
       "id": "location_hall_north",
       "name": "North Hall",
       "description": "Nicely lit room with logos of The United Earth federation imprinted on the walls.",
       "stored": [],
-      "neighbours": ["location_bridge", "location_canteen", "location_lounge", "location_hall_south"]
+      "neighboursId": [
+        "location_bridge",
+        "location_canteen",
+        "location_lounge",
+        "location_hall_south"
+      ],
+      "neighbours": []
     },
     {
       "id": "location_canteen",
       "name": "Canteen",
       "description": "Large room with many tables and a central pillar for dispensing food. Your clearance is too low to access rest of the ship from here.",
-      "stored": ["item_coffee", "item_crowbar"],
-      "neighbours": ["location_hall_north"]
+      "stored": [
+        {
+          "id": "item_coffee",
+          "name": "cheap coffee",
+          "description": "Barely hot, barely drinkable, but hushes the voices."
+        },
+        {
+          "id": "item_crowbar",
+          "name": "crowbar",
+          "description": "Courtesy of mr.Freeman."
+        }
+      ],
+      "neighboursId": ["location_hall_north"],
+      "neighbours": []
     },
     {
       "id": "location_lounge",
       "name": "Lounge",
       "description": "Ping pong tables, chess tables and even normal tables can be found here for the pleasure of the crew. Jim Spacer the cleaner is here.",
       "stored": [],
-      "neighbours": ["location_hall_north"]
+      "neighboursId": ["location_hall_north"],
+      "neighbours": []
     },
     {
       "id": "location_hall_south",
       "name": "South Hall",
       "description": "One flickering light is illuminating the hall. The walls are gradually darker towards the boiler.",
       "stored": [],
-      "neighbours": ["location_hall_north", "location_storage", "location_airlock", "location_boiler"]
+      "neighboursId": [
+        "location_hall_north",
+        "location_storage",
+        "location_airlock",
+        "location_boiler"
+      ],
+      "neighbours": []
     },
     {
       "id": "location_storage",
       "name": "Storage",
       "description": "Mountains upon mountains of creates lay here. All sorts off things are stored here.",
-      "stored": ["item_bag_of_coal"],
-      "neighbours": ["location_hall_south"]
+      "stored": [
+        {
+          "id": "item_bag_of_coal",
+          "name": "bag of coal",
+          "description": "Contains few chunks of coal, along with fur..."
+        }
+      ],
+      "neighboursId": ["location_hall_south"],
+      "neighbours": []
     },
     {
       "id": "location_airlock",
       "name": "Airlock",
       "description": "Small chamber with space suits, a button to evacuate the air and a lever to open the airlock.",
-      "stored": ["item_space_suit "],
-      "neighbours": ["location_hall_south"]
+      "stored": [
+        {
+          "id": "item_space_suit",
+          "name": "space suit",
+          "description": "Developed by the finest engineers above the age of 9."
+        }
+      ],
+      "neighboursId": ["location_hall_south"],
+      "neighbours": []
     },
     {
       "id": "location_boiler",
       "name": "Boiler",
       "description": "Dust is everywhere. Here is the boiler, fueled by coal, that powers the entire ship.",
       "stored": [],
-      "neighbours": ["location_hall_south"]
+      "neighboursId": ["location_hall_south"],
+      "neighbours": []
     }
   ]
 }
