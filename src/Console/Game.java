@@ -1,14 +1,16 @@
 package Console;
 
 import Commands.Command;
+import Commands.Look;
 import Commands.Move;
+import Commands.Take;
+import Locations.Location;
 import Rest.Player;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class Game {
-    private GameState gameState;
     private GameData gameData;
     private HashMap<String, Command> commands;
     private Player player;
@@ -23,17 +25,6 @@ public class Game {
         }
     }
 
-    public void initialization(){
-        sc = new Scanner(System.in);
-        shouldExit = false;
-        player = new Player();
-        commands = new HashMap<>();
-        gameData = GameData.loadGameDataFromResources("/gamedata.json");
-        player.setLocation(gameData.findLocation("location_bridge"));
-        commands.put("move", new Move(player, gameData.locations));
-
-    }
-
     private void gameLoop(){
         System.out.print(">>");
         String command = sc.nextLine().toLowerCase();
@@ -46,9 +37,40 @@ public class Game {
             System.out.println("Unknown command: " + parts[0]);
         }
 
-
-
     }
+
+    private void initialization(){
+        sc = new Scanner(System.in);
+        shouldExit = false;
+        player = new Player();
+
+        gameData = GameData.loadGameDataFromResources("/gamedata.json");
+        player.setLocation(gameData.findLocation("location_bridge"));
+        neighboursSet();
+        commandInit();
+    }
+
+    private void neighboursSet(){
+        for (Location l : gameData.locations){
+            for (String neighbourId : l.getNeighboursId()){
+                l.addNeighbour(gameData.findLocation(neighbourId));
+            }
+            for (String itemId : l.getStoredId()){
+                l.addStored(gameData.findItem(itemId));
+            }
+        }
+    }
+
+    private void commandInit(){
+        commands = new HashMap<>();
+        commands.put("move", new Move(player, gameData.locations));
+        commands.put("take", new Take(player, gameData.items));
+        commands.put("look", new Look(player));
+    }
+
+
+
+
 
 
 

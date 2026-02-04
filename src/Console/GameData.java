@@ -65,5 +65,14 @@ public class GameData {
         throw new IllegalArgumentException("Neexistuje lokace s id: " + id);
     }
 
+    public Item findItem(String id) {
+        for (Item i : items) {
+            if (i.getId().equals(id)){
+                return i;
+            }
+        }
+        throw new IllegalArgumentException("Neexistuje item  s id: " + id);
+    }
+
 
 }

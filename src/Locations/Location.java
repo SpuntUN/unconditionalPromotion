@@ -1,13 +1,17 @@
 package Locations;
 
+import Rest.Item;
+
 import java.util.ArrayList;
 
 public class Location {
     private String id;
     private String name;
     private String description;
-    private ArrayList<String> stored;
-    private ArrayList<String> neighbours;
+    private ArrayList<String> storedId;
+    private ArrayList<Item> stored;
+    private ArrayList<String> neighboursId;
+    private ArrayList<Location> neighbours;
 
     public String getId() {
         return id;
@@ -17,11 +21,24 @@ public class Location {
         return name;
     }
 
-    public ArrayList<String> getNeighbours() {
-        return neighbours;
+    public ArrayList<String> getNeighboursId() {
+        return neighboursId;
+    }
+
+    public boolean addNeighbour(Location l){
+        return neighbours.add(l);
+    }
+
+    public ArrayList<String> getStoredId() {
+        return storedId;
+    }
+
+    public boolean addStored(Item i){
+        return stored.add(i);
     }
 
     public String getDescription() {
+
         return description;
     }
 
