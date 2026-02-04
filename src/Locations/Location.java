@@ -13,6 +13,24 @@ public class Location {
     private ArrayList<String> neighboursId;
     private ArrayList<Location> neighbours;
 
+    public boolean equalsNeighbourName(String str){
+        for (Location l : neighbours){
+            if (l.getName().equalsIgnoreCase(str)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Location findNeighbour(String str){
+        for (Location l : neighbours){
+            if (l.getName().equalsIgnoreCase(str)){
+                return l;
+            }
+        }
+        return null;
+    }
+
     public String getId() {
         return id;
     }

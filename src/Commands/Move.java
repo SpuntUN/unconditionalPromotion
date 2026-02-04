@@ -9,25 +9,16 @@ import java.util.ArrayList;
 public class Move extends Command{
 
     private Player player;
-    public ArrayList<Location> locations;
 
-    public Move(Player player, ArrayList<Location> locations) {
+    public Move(Player player) {
         this.player = player;
-        this.locations = locations;
     }
 
     @Override
     public String execute(String command) {
-        for (Location l : locations){
-            if (command.equalsIgnoreCase(l.getName())){
-                String id = l.getId();
-                for (String neighbour : player.getLocation().getNeighbours()){
-                    if (id.equals(neighbour)){
-                        player.setLocation(l);
-                        return "Moved to " + l.getName();
-                    }
-                }
-            }
+        Location current = player.getLocation();
+        if (current.equalsNeighbourName(command)){
+            player.setLocation(current.findNeighbour(command));
         }
         return "No location with the name \"" + command + "\" has been found";
     }

@@ -63,8 +63,8 @@ public class Game {
 
     private void commandInit(){
         commands = new HashMap<>();
-        commands.put("move", new Move(player, gameData.locations));
-        commands.put("take", new Take(player, gameData.items));
+        commands.put("move", new Move(player));
+        commands.put("take", new Take(player));
         commands.put("look", new Look(player));
     }
 
