@@ -43,7 +43,7 @@ public class Game {
         player = new Player();
 
         gameData = GameData.loadGameDataFromResources("/gamedata.json");
-        player.setLocation(gameData.findLocation("location_lounge"));
+        player.setLocation(gameData.findLocation("location_canteen"));
         neighboursInit();
         commandInit();
     }

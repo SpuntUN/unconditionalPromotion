@@ -1,4 +1,6 @@
 package NPCs;
+import Rest.Player;
+
 import java.util.ArrayList;
 
 public class Dialogue {
@@ -7,19 +9,31 @@ public class Dialogue {
 
 
 
-    public String displayOptions(){
+    public String displayOptions(Player player) {
         String str = intro + "\n";
-        for (int i = 0; i < options.size(); i++) {
-            str += (i + 1) + ". " + options.get(i).getText() + "\n";
+        int visibleIndex = 1;
+
+        for (DialogueOption option : options) {
+            if (option.isAvailable(player)) {
+                str += visibleIndex + ". " + option.getText() + "\n";
+                visibleIndex++;
+            }
         }
         return str;
     }
 
-    public Dialogue chooseOption(int index) {
-        if (index < 1 || index > options.size()) {
-            return this;
+    public Dialogue chooseOption(int index, Player player) {
+        int visibleIndex = 1;
+
+        for (DialogueOption option : options) {
+            if (option.isAvailable(player)) {
+                if (visibleIndex == index) {
+                    return option.getNextDialogue();
+                }
+                visibleIndex++;
+            }
         }
-        return options.get(index - 1).getNextDialogue();
+        return this;
     }
 
     public String getIntro() {

@@ -39,7 +39,7 @@ public class Talk extends Command{
         currentDialogue = npc.getDialogue();
         boolean doneTalking = false;
         while (!doneTalking){
-            System.out.println(currentDialogue.displayOptions());
+            System.out.println(currentDialogue.displayOptions(player));
 
             int choice;
             try {
@@ -49,7 +49,7 @@ public class Talk extends Command{
                 continue;
             }
 
-            currentDialogue = currentDialogue.chooseOption(choice);
+            currentDialogue = currentDialogue.chooseOption(choice, player);
             if (currentDialogue == null){
                 doneTalking = true;
             }

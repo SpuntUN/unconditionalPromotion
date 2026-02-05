@@ -50,6 +50,16 @@
                             {
                               "text": "ok",
                               "nextDialogue": null
+                            },
+                            {
+                              "text": "Give him the coffee",
+                              "requiredItemId": "coffee",
+                              "nextDialogue": {
+                                "intro": "Jim Spacer: Ahhh… that’s horrible, take that stuff away from me. But since you are here. Password’s \"RICH123\".",
+                                "options": [
+                                  { "text": "*leave*", "nextDialogue": null }
+                                ]
+                              }
                             }
                           ]
                         }
@@ -106,11 +116,11 @@
     {
       "id": "location_canteen",
       "name": "Canteen",
-      "description": "Large room with many tables and a central pillar for dispensing food. Your clearance is too low to access rest of the ship from here.",
+      "description": "Large room with many tables and a central pillar for dispensing food. Coffee maker seems to be broken, there is an unattended coffee next to it.",
       "stored": [
         {
           "id": "item_coffee",
-          "name": "cheap coffee",
+          "name": "coffee",
           "description": "Barely hot, barely drinkable, but hushes the voices."
         },
         {
