@@ -14,7 +14,7 @@ public class Location {
 
     public Location findNeighbour(String str){
         for (Location l : neighbours){
-            if (l.getName().equalsIgnoreCase(str)){
+            if (l.getName().split(" ")[0].equalsIgnoreCase(str.split(" ")[0])){
                 return l;
             }
         }
@@ -23,7 +23,7 @@ public class Location {
 
     public Item findItem(String str){
         for (Item i : stored){
-            if (i.getName().equalsIgnoreCase(str)){
+            if (i.getName().split(" ")[0].equalsIgnoreCase(str.split(" ")[0])){
                 return i;
             }
         }
