@@ -1,4 +1,23 @@
 package Commands;
 
-public class InventoryCmd {
+import Rest.Inventory;
+import Rest.Player;
+
+public class InventoryCmd extends  Command{
+
+    private Player player;
+
+    public InventoryCmd(Player player){
+        this.player = player;
+    }
+
+    @Override
+    public String execute(String command) {
+        return player.getInventory().getInventoryNames();
+    }
+
+    @Override
+    public boolean exit() {
+        return super.exit();
+    }
 }

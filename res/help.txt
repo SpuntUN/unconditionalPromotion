@@ -1,0 +1,10 @@
+Commands:
+    Move <neighbouring location> - Changes your location
+    Take <Item> - Add said item into your inventory
+    Relinquish <Item> - Drops said item onto the floor
+    Look <> / <Item/NPC> - Describes current location if empty, or specific item or NPC
+    Talk <NPC> - Initiates a dialogue
+    Use <Item> - Uses an available item
+    Inventory <> - Returns a list of items in inventory
+    Hint <> Gives a hint on what you should do
+    Exit <> Exits the game

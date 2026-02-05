@@ -18,6 +18,14 @@ public class Inventory {
         return items.add(item);
     }
 
+    public String getInventoryNames(){
+        String str = "INVENTORY:";
+        for (Item item : items){
+            str += "\n" +  item.getName();
+        }
+        return str;
+    }
+
     public boolean remove(){
         return false;
     }

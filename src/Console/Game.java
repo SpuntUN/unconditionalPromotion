@@ -1,9 +1,6 @@
 package Console;
 
-import Commands.Command;
-import Commands.Look;
-import Commands.Move;
-import Commands.Take;
+import Commands.*;
 import Locations.Location;
 import Rest.Player;
 
@@ -63,6 +60,9 @@ public class Game {
         commands.put("move", new Move(player));
         commands.put("take", new Take(player));
         commands.put("look", new Look(player));
+        commands.put("inventory", new InventoryCmd(player));
+        commands.put("exit", new Exit());
+        commands.put("help", new Help());
     }
 
 
