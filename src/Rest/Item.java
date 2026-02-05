@@ -13,5 +13,7 @@ public class Item {
         return id;
     }
 
-
+    public String getDescription() {
+        return description;
+    }
 }

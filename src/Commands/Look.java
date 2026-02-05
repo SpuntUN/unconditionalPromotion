@@ -15,6 +15,12 @@ public class Look extends Command{
         if (command.isEmpty()){
             return player.getLocation().getDescription();
         }
+        if (player.getLocation().findItem(command) != null){
+            return player.getLocation().findItem(command).getDescription();
+        }
+        if (player.getInventory().findItem(command) != null){
+            return player.getInventory().findItem(command).getDescription();
+        }
         return "You can't find anything like \"" + command + "\" to look at";
     }
 
