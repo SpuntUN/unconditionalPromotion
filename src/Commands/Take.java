@@ -20,6 +20,7 @@ public class Take extends Command {
         if (current.findItem(command) != null){
             Item addedItem = current.findItem(command);
             player.getInventory().add(current.findItem(command));
+            current.removeItem(addedItem);
             return addedItem.getName() + " added to inventory";
         }
         return "No item with the name \"" + command + "\" has been found";

@@ -63,6 +63,7 @@ public class Game {
         commands.put("inventory", new InventoryCmd(player));
         commands.put("exit", new Exit());
         commands.put("help", new Help());
+        commands.put("relinquish", new Relinquish(player));
     }
 
 

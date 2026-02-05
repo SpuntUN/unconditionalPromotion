@@ -30,6 +30,14 @@ public class Location {
         return null;
     }
 
+    public boolean addItem(Item item){
+        return stored.add(item);
+    }
+
+    public boolean removeItem(Item item){
+        return stored.remove(item);
+    }
+
     public String getId() {
         return id;
     }
