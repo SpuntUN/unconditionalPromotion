@@ -2,6 +2,7 @@ package Console;
 
 import Commands.*;
 import Locations.Location;
+import NPCs.NPC;
 import Rest.Player;
 
 import java.util.HashMap;
@@ -43,15 +44,18 @@ public class Game {
 
         gameData = GameData.loadGameDataFromResources("/gamedata.json");
         player.setLocation(gameData.findLocation("location_bridge"));
-        neighboursSet();
+        neighboursInit();
         commandInit();
     }
 
-    private void neighboursSet(){
+    private void neighboursInit(){
         for (Location l : gameData.locations){
             for (String neighbourId : l.getNeighboursId()){
                 l.addNeighbour(gameData.findLocation(neighbourId));
             }
+        }
+        for (NPC npc : gameData.NPCs){
+            npc.setLocation(gameData.findLocation(npc.getLocationId()));
         }
     }
 

@@ -3,17 +3,23 @@
     {
       "id": "npc_dead_captain",
       "name": "captain",
-      "description": "Captain Richter lays dead upon the floor."
+      "description": "Captain Richter lays dead upon the floor.",
+      "locationId": "location_bridge",
+      "canMove": false
     },
     {
       "id": "npc_cleaner",
       "name": "cleaner",
-      "description": "Jim nonchalantly leans on the wall, doing with the up most effectiveness not his job."
+      "description": "Jim nonchalantly leans on the wall, doing with the up most effectiveness not his job.",
+      "locationId": "location_lounge",
+      "canMove": false
     },
     {
       "id": "npc_pony",
       "name": "pony",
-      "description": "She is a fast one, shuffling from one place to another."
+      "description": "She is a fast one, shuffling from one place to another.",
+      "locationId": "location_storage",
+      "canMove": false
     }
   ],
   "locations": [
