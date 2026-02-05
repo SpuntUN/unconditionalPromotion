@@ -7,10 +7,10 @@ public class Dialogue {
 
 
 
-    public String display(){
+    public String displayOptions(){
         String str = intro + "\n";
         for (int i = 0; i < options.size(); i++) {
-            str += (i + 1) + ". " + options.get(i).getText();
+            str += (i + 1) + ". " + options.get(i).getText() + "\n";
         }
         return str;
     }
@@ -20,5 +20,9 @@ public class Dialogue {
             return this;
         }
         return options.get(index - 1).getNextDialogue();
+    }
+
+    public String getIntro() {
+        return intro;
     }
 }

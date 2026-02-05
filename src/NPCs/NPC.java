@@ -19,7 +19,15 @@ public class NPC {
         return locationId;
     }
 
+    public Location getLocation() {
+        return location;
+    }
+
     public Dialogue getDialogue() {
         return dialogue;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

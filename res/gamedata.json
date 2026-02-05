@@ -9,7 +9,7 @@
     },
     {
       "id": "npc_cleaner",
-      "name": "cleaner",
+      "name": "Jim Spacer",
       "description": "Jim nonchalantly leans on the wall, doing with the up most effectiveness not his job.",
       "locationId": "location_lounge",
       "canMove": false,
@@ -38,7 +38,7 @@
               "intro": "Jim gives you a puzzled look.\nJim Spacer: You mean he's dead?",
               "options": [
                 {
-                  "text": "nod yay",
+                  "text": "*nod yay*",
                   "nextDialogue": {
                     "intro": "Jim Spacer: Old captain finally kicked the bucked, had it coming with the paint huffin'. And you tellin' me why?",
                     "options": [
@@ -58,7 +58,7 @@
                   }
                 },
                 {
-                  "text": "nod nay",
+                  "text": "*nod nay*",
                   "nextDialogue": null
                 }
               ]

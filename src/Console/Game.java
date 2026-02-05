@@ -43,7 +43,7 @@ public class Game {
         player = new Player();
 
         gameData = GameData.loadGameDataFromResources("/gamedata.json");
-        player.setLocation(gameData.findLocation("location_bridge"));
+        player.setLocation(gameData.findLocation("location_lounge"));
         neighboursInit();
         commandInit();
     }
@@ -63,11 +63,12 @@ public class Game {
         commands = new HashMap<>();
         commands.put("move", new Move(player));
         commands.put("take", new Take(player));
-        commands.put("look", new Look(player));
+        commands.put("look", new Look(player, gameData.NPCs));
         commands.put("inventory", new InventoryCmd(player));
         commands.put("exit", new Exit());
         commands.put("help", new Help());
         commands.put("relinquish", new Relinquish(player));
+        commands.put("talk", new Talk(player, gameData.NPCs, sc));
     }
 
 
