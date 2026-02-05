@@ -2,7 +2,7 @@
   "NPCs": [
     {
       "id": "npc_dead_captain",
-      "name": "captain",
+      "name": "the captain",
       "description": "Captain Richter lays dead upon the floor.",
       "locationId": "location_bridge",
       "canMove": false
@@ -12,11 +12,64 @@
       "name": "cleaner",
       "description": "Jim nonchalantly leans on the wall, doing with the up most effectiveness not his job.",
       "locationId": "location_lounge",
-      "canMove": false
+      "canMove": false,
+      "dialogue": {
+        "intro": "You go towards the janitor.\nJim Spacer: What'ya looki'n at?",
+        "options": [
+          {
+            "text": "Just passing by.",
+            "nextDialogue": null
+          },
+          {
+            "text": "What are you up to my good sir?",
+            "nextDialogue": {
+              "intro": "He gives you a mean look.\nJim Spacer: What does it look like i'm doin'? I'm enjoying my break.",
+              "options": [
+                {
+                  "text": "*leave*",
+                  "nextDialogue": null
+                }
+              ]
+            }
+          },
+          {
+            "text": "The captain appears to have left this corporeal realm.",
+            "nextDialogue": {
+              "intro": "Jim gives you a puzzled look.\nJim Spacer: You mean he's dead?",
+              "options": [
+                {
+                  "text": "nod yay",
+                  "nextDialogue": {
+                    "intro": "Jim Spacer: Old captain finally kicked the bucked, had it coming with the paint huffin'. And you tellin' me why?",
+                    "options": [
+                      {
+                        "text": "I need a password to captains computer, though you might know the password",
+                        "nextDialogue": {
+                          "intro": "Jim Spacer: And you'd be right, but I ain't givin' it for jack squat. Bring me coffee from cafeteria and I'll share.",
+                          "options": [
+                            {
+                              "text": "ok",
+                              "nextDialogue": null
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "text": "nod nay",
+                  "nextDialogue": null
+                }
+              ]
+            }
+          }
+        ]
+      }
     },
     {
       "id": "npc_pony",
-      "name": "pony",
+      "name": "the pony",
       "description": "She is a fast one, shuffling from one place to another.",
       "locationId": "location_storage",
       "canMove": false

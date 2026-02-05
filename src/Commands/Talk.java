@@ -1,4 +1,4 @@
 package Commands;
 
-public class Talk {
+public class Talk{
 }

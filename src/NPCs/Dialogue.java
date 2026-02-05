@@ -1,10 +1,11 @@
 package NPCs;
-
 import java.util.ArrayList;
 
 public class Dialogue {
     private String intro;
     private ArrayList<DialogueOption> options;
+
+
 
     public String display(){
         String str = intro + "\n";
