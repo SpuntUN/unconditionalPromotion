@@ -19,15 +19,13 @@ public class Take extends Command {
         Location current = player.getLocation();
         if (current.findItem(command) != null){
             Item addedItem = current.findItem(command);
-            player.getInventory().add(current.findItem(command));
+            if (!player.getInventory().add(current.findItem(command))){
+                return "Full inventory";
+            }
             current.removeItem(addedItem);
-            return addedItem.getName() + " added to inventory";
+            return addedItem.getName() + " added to inventory" + "\n" + addedItem.getDescription();
         }
         return "No item with the name \"" + command + "\" has been found";
     }
 
-    @Override
-    public boolean exit() {
-        return super.exit();
-    }
 }

@@ -28,8 +28,4 @@ public class Help extends Command {
         return helpStr;
     }
 
-    @Override
-    public boolean exit() {
-        return super.exit();
-    }
 }

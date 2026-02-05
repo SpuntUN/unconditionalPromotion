@@ -18,7 +18,7 @@ public class Look extends Command{
     @Override
     public String execute(String command) {
         if (command.isEmpty()){
-            return player.getLocation().getDescription();
+            return player.getLocation().getDescription() + "\n" + player.getLocation().getNeighboursDescription();
         }
         if (player.getLocation().findItem(command) != null){
             return player.getLocation().findItem(command).getDescription();
@@ -32,10 +32,5 @@ public class Look extends Command{
             }
         }
         return "You can't find anything like \"" + command + "\" to look at";
-    }
-
-    @Override
-    public boolean exit() {
-        return super.exit();
     }
 }

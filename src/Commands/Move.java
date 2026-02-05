@@ -24,8 +24,4 @@ public class Move extends Command{
         return "No location with the name \"" + command + "\" has been found";
     }
 
-    @Override
-    public boolean exit() {
-        return super.exit();
-    }
 }

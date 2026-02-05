@@ -24,8 +24,4 @@ public class Relinquish extends Command{
         return "No item with the name \"" + command + "\" has been found";
     }
 
-    @Override
-    public boolean exit() {
-        return super.exit();
-    }
 }

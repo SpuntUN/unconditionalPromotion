@@ -16,8 +16,4 @@ public class InventoryCmd extends  Command{
         return player.getInventory().getInventoryNames();
     }
 
-    @Override
-    public boolean exit() {
-        return super.exit();
-    }
 }

@@ -74,6 +74,18 @@ public class Location {
         return description;
     }
 
+    public String getNeighboursDescription(){
+        String str = "This location neighbours ";
+        if (neighbours.size() > 1){
+            for (int i = 0; i < neighbours.size()-1; i++) {
+                str += neighbours.get(i).getName() + ", ";
+            }
+            str += "and " + neighbours.getLast().getName();
+            return str;
+        }
+        return str + neighbours.getFirst().getName();
+    }
+
     @Override
     public String toString() {
         return id;

@@ -116,7 +116,7 @@
     {
       "id": "location_canteen",
       "name": "Canteen",
-      "description": "Large room with many tables and a central pillar for dispensing food. Coffee maker seems to be broken, there is an unattended coffee next to it.",
+      "description": "Large room with many tables and a central pillar for dispensing food.\nCoffee maker seems to be broken, there is an unattended coffee next to it. A crowbar seems to be inside a glass case.",
       "stored": [
         {
           "id": "item_coffee",
@@ -178,7 +178,7 @@
           "description": "Developed by the finest engineers above the age of 9."
         }
       ],
-      "neighboursId": ["location_hall_south"],
+      "neighboursId": ["location_hall_south", "location_ext_airlock"],
       "neighbours": []
     },
     {
@@ -188,6 +188,81 @@
       "stored": [],
       "neighboursId": ["location_hall_south"],
       "neighbours": []
+    },
+    {
+      "id": "location_ext_airlock",
+      "name": "Airlock Exterior",
+      "description": "A narrow platform clinging to the hull of the ship. The orion constellation can be seen magnificently from here.",
+      "stored": [],
+      "neighboursId": ["location_airlock", "location_ext_hall_south"],
+      "neighbours": []
+    },
+    {
+      "id": "location_ext_hall_south",
+      "name": "South Walkway",
+      "description": "You see nothing of note.",
+      "stored": [],
+      "neighboursId": [
+        "location_ext_airlock",
+        "location_ext_storage",
+        "location_ext_boiler",
+        "location_ext_hall_north"
+      ],
+      "neighbours": []
+    },
+    {
+      "id": "location_ext_storage",
+      "name": "Cargo Area",
+      "description": "Crates are bolted directly to the hull, for those who couldn't effort keeping in inside.",
+      "stored": [],
+      "neighboursId": ["location_ext_hall_south"],
+      "neighbours": []
+    },
+    {
+      "id": "location_ext_boiler",
+      "name": "Boiler Section",
+      "description": "Vents and pipes are radiating heat into the void of space.",
+      "stored": [],
+      "neighboursId": ["location_ext_hall_south"],
+      "neighbours": []
+    },
+    {
+      "id": "location_ext_hall_north",
+      "name": "North Walkway",
+      "description": "Federation markings are barely visible.",
+      "stored": [],
+      "neighboursId": [
+        "location_ext_hall_south",
+        "location_ext_bridge",
+        "location_ext_canteen",
+        "location_ext_lounge"
+      ],
+      "neighbours": []
+    },
+    {
+      "id": "location_ext_bridge",
+      "name": "Bridge Exterior",
+      "description": "The exterior of the bridge. You can faintly see consoles through the viewport.",
+      "stored": [],
+      "neighboursId": ["location_ext_hall_north"],
+      "neighbours": []
+    },
+    {
+      "id": "location_ext_canteen",
+      "name": "Life Support Area",
+      "description": "Better not touch anything here.",
+      "stored": [],
+      "neighboursId": ["location_ext_hall_north"],
+      "neighbours": []
+    },
+    {
+      "id": "location_ext_lounge",
+      "name": "Recreation Area Exterior",
+      "description": "The meteoroid hit here. most of the hull on this side is blackened from dust.\nThere is a small indentation where the radiation shield has been stripped.\nNothing major, from that fact that Jim is currently developing cancer. Better seal it.",
+      "stored": [],
+      "neighboursId": ["location_ext_hall_north"],
+      "neighbours": []
     }
+
   ]
 }

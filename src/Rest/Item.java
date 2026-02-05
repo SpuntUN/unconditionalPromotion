@@ -1,5 +1,7 @@
 package Rest;
 
+import Locations.Location;
+
 public class Item {
     private String id;
     private String name;

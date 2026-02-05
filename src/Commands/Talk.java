@@ -34,6 +34,9 @@ public class Talk extends Command{
         if (npc == null){
             return "No person with the name \"" + command + "\" has been found";
         }
+        if (npc.getDialogue() == null){
+            return "They can't talk";
+        }
 
 
         currentDialogue = npc.getDialogue();
@@ -57,8 +60,4 @@ public class Talk extends Command{
         return "You stop talking";
     }
 
-    @Override
-    public boolean exit() {
-        return super.exit();
-    }
 }
