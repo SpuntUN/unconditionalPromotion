@@ -12,6 +12,14 @@ public class Location {
     private ArrayList<String> neighboursId;
     private ArrayList<Location> neighbours;
 
+
+
+    public Location(String name) {
+        this.name = name;
+        neighbours = new ArrayList<>();
+        stored = new ArrayList<>();
+    }
+
     public Location findNeighbour(String str){
         for (Location l : neighbours){
             if (l.getName().split(" ")[0].equalsIgnoreCase(str.split(" ")[0])){
@@ -64,10 +72,6 @@ public class Location {
         return neighbours.add(l);
     }
 
-
-    public boolean addStored(Item i){
-        return stored.add(i);
-    }
 
     public String getDescription() {
 
