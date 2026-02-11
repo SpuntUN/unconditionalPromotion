@@ -14,6 +14,12 @@ public class Take extends Command {
         this.player = player;
     }
 
+
+    /**
+     * Relocates an item out of locations storage into player's inventory.
+     * @param command name of an item currently in storage in a location the player is in.
+     * @return either message that player has successfully taken the item, or that it couldn't find the corresponding item.
+     */
     @Override
     public String execute(String command) {
         Location current = player.getLocation();

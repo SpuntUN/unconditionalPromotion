@@ -23,6 +23,9 @@ public class Game {
         }
     }
 
+    /**
+     * Checks for user input and if it corresponds to available commands, until user inputs 'exit'.
+     */
     private void gameLoop(){
         System.out.print(">>");
         String command = sc.nextLine().toLowerCase();
@@ -37,6 +40,7 @@ public class Game {
 
     }
 
+
     private void initialization(){
         sc = new Scanner(System.in);
         shouldExit = false;
@@ -48,6 +52,10 @@ public class Game {
         commandInit();
     }
 
+    /**
+     * Initiations neighbours of all locations and NPCs starting location.
+     * NPCs starting locations
+     */
     private void neighboursInit(){
         for (Location l : gameData.locations){
             for (String neighbourId : l.getNeighboursId()){

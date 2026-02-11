@@ -14,6 +14,12 @@ public class Move extends Command{
         this.player = player;
     }
 
+    /**
+     * Moves the player to a different location.
+     * @param command contains the name of a neighbouring location to the player.
+     * @return either message that player has successfully moved to a location, or that it couldn't find the corresponding location.
+     */
+
     @Override
     public String execute(String command) {
         Location current = player.getLocation();

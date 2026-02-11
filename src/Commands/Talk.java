@@ -22,6 +22,16 @@ public class Talk extends Command{
         currentDialogue = null;
     }
 
+    /**
+     * Initiations dialogue with an NPC located at the player's current location.
+     * The method searches for an NPC at the player's location, validates if the NPC is capable of dialogue,
+     * and proceeds to interact with the NPC through dialogue options until the conversation ends.
+     *
+     * @param command the name of the NPC to engage in dialogue.
+     * @return a message indicating the result of the conversation, such as whether the NPC was found,
+     *         whether they can talk, or the conclusion of the dialogue interaction.
+     */
+
     @Override
     public String execute(String command) {
         NPC npc = null;

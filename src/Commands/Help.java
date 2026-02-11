@@ -5,11 +5,20 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * The Help class provides a command that displays helpful information
+ * loaded from an external text file. This information is returned when
+ * the command is executed.
+ */
 public class Help extends Command {
 
     String helpStr;
 
-    public Help(){
+
+    /**
+     * Loads help information from a txt file and saves it to helpStr.
+     */
+    public Help() {
         helpStr = "";
         try (BufferedReader br = new BufferedReader(new FileReader("res/help.txt"))) {
             String line;

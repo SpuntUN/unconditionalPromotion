@@ -12,6 +12,12 @@ public class Relinquish extends Command{
         this.player = player;
     }
 
+
+    /**
+     * Relocates an item out of player's inventory into a locations storage.
+     * @param command name of an item currently in inventory.
+     * @return either message that player has successfully dropped the item, or that it couldn't find the corresponding item.
+     */
     @Override
     public String execute(String command) {
         Inventory inv = player.getInventory();
