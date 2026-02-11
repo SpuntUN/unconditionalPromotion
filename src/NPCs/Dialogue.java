@@ -3,6 +3,13 @@ import Rest.Player;
 
 import java.util.ArrayList;
 
+/**
+ * Represents a conversation that a player can have.
+ * It has an introductory text and a list of dialogue options, which vary
+ * depending on the NPC or the player's inventory.
+ * @author Matěj Švec
+ */
+
 public class Dialogue {
     private String intro;
     private ArrayList<DialogueOption> options;
@@ -34,6 +41,7 @@ public class Dialogue {
      * @param index the index corresponding to a dialogue option, starting from 1.
      * @param player the player whose current state determines available options.
      * @return the next dialogue if the given index corresponds to an available option otherwise, returns the current dialogue.
+     * @author Matěj Švec
      */
     public Dialogue chooseOption(int index, Player player) {
         int visibleIndex = 1;

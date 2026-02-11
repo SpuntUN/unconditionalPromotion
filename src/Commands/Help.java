@@ -17,6 +17,7 @@ public class Help extends Command {
 
     /**
      * Loads help information from a txt file and saves it to helpStr.
+     * @author Matěj Švec
      */
     public Help() {
         helpStr = "";

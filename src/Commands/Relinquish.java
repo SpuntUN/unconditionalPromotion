@@ -17,6 +17,7 @@ public class Relinquish extends Command{
      * Relocates an item out of player's inventory into a locations storage.
      * @param command name of an item currently in inventory.
      * @return either message that player has successfully dropped the item, or that it couldn't find the corresponding item.
+     * @author Matěj Švec
      */
     @Override
     public String execute(String command) {

@@ -28,8 +28,9 @@ public class Talk extends Command{
      * and proceeds to interact with the NPC through dialogue options until the conversation ends.
      *
      * @param command the name of the NPC to engage in dialogue.
-     * @return a message indicating the result of the conversation, such as whether the NPC was found,
-     *         whether they can talk, or the conclusion of the dialogue interaction.
+     * @return a message saying the result of the conversation, such as whether the NPC was found,
+     *         whether they can talk, the conclusion of the dialogue interaction.
+     * @author Matěj Švec
      */
 
     @Override

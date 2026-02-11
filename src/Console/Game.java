@@ -8,6 +8,12 @@ import Rest.Player;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * The game runs here.
+ * Input and console is handled here.
+ * @author Matěj Švec
+ */
+
 public class Game {
     private GameData gameData;
     private HashMap<String, Command> commands;
@@ -55,6 +61,7 @@ public class Game {
     /**
      * Initiations neighbours of all locations and NPCs starting location.
      * NPCs starting locations
+     * @author Matěj Švec
      */
     private void neighboursInit(){
         for (Location l : gameData.locations){

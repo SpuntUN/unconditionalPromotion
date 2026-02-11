@@ -19,6 +19,7 @@ public class Look extends Command{
      * Method for dropping an item into a location where player currently is.
      * @param command changes the return String depending on if the String is empty, has the name of an item, or NPC.
      * @return description of either location, item, NPC, or returns a String saying it couldn't find anything.
+     * @author Matěj Švec
      */
     @Override
     public String execute(String command) {
