@@ -41,7 +41,7 @@ public class Airlock extends Location{
      * Triggers the lever's functionality depending on if the player has a suit on,
      * the room is decompressed and or the door.
      * Can result in death, which is than handled in Class Game.
-     * @return String informing the player of successfully decompression or successful death.
+     * @return String informing the player of successfully decompression or compression; or a successful death.
      */
     private String pullLever(){
         if (!hasSpaceSuit()){
@@ -60,6 +60,12 @@ public class Airlock extends Location{
         return lever_Compress;
     }
 
+    /**
+     * Triggers the button's functionality depending on if the player has a suit on,
+     * the room is decompressed and or the door.
+     * Can result in death, which is than handled in Class Game.
+     * @return String informing the player of successfully opening or closing of the door; or a successful death.
+     */
     private String pushButton(){
         if (doorOpen){
             doorOpen = false;
