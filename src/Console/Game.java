@@ -21,7 +21,7 @@ public class Game {
     private QuestManager questManager;
     private Scanner sc;
     private boolean shouldExit;
-    static Status status;
+    public static Status status;
 
     public void start(){
         initialization();
@@ -46,7 +46,9 @@ public class Game {
             System.out.println("Unknown command: " + parts[0]);
         }
 
-
+        if (status.equals(Status.DIED)){
+            shouldExit = true;
+        }
 
     }
 
