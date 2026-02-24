@@ -4,7 +4,7 @@ import Rest.Item;
 
 import java.util.ArrayList;
 
-public class Location {
+public class Location implements Usable {
     private String id;
     private String name;
     private String description;
@@ -13,11 +13,21 @@ public class Location {
     private ArrayList<Location> neighbours;
 
 
+    public Location(String id, String name, String description, ArrayList<String> neighboursId) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.neighboursId = neighboursId;
+    }
 
     public Location(String name) {
         this.name = name;
         neighbours = new ArrayList<>();
         stored = new ArrayList<>();
+    }
+
+    public Location(){
+
     }
 
     public Location findNeighbour(String str){
@@ -36,6 +46,11 @@ public class Location {
             }
         }
         return null;
+    }
+
+    @Override
+    public String use(String command) {
+        return "";
     }
 
     public boolean addItem(Item item){

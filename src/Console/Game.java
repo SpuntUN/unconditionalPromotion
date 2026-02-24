@@ -21,6 +21,7 @@ public class Game {
     private QuestManager questManager;
     private Scanner sc;
     private boolean shouldExit;
+    static Status status;
 
     public void start(){
         initialization();
@@ -30,7 +31,8 @@ public class Game {
     }
 
     /**
-     * Checks for user input and if it corresponds to available commands, until user inputs 'exit'.
+     * Checks for user input and if it corresponds to available commands, until user inputs 'exit'
+     * and checks for status of the game.
      */
     private void gameLoop(){
         System.out.print(">>");
@@ -44,10 +46,13 @@ public class Game {
             System.out.println("Unknown command: " + parts[0]);
         }
 
+
+
     }
 
 
     private void initialization(){
+        status = Status.NORMAL;
         sc = new Scanner(System.in);
         shouldExit = false;
         player = new Player();
