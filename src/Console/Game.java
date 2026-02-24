@@ -91,6 +91,7 @@ public class Game {
         commands.put("help", new Help());
         commands.put("relinquish", new Relinquish(player));
         commands.put("talk", new Talk(player, gameData.NPCs, sc));
+        commands.put("use", new Use(player));
     }
 
 
