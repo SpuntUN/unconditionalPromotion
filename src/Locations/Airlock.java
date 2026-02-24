@@ -14,7 +14,6 @@ public class Airlock extends Location{
     private String lever_Decompress;
     private String lever_Compress;
     private String door_Close;
-    private String door_DecompressedStillWithoutSuitDeath;
     private String door_CompressedFlungWithoutSuitDeath;
     private String door_CompressedFlungWithSuitDeath;
     private String door_Open;
@@ -73,9 +72,6 @@ public class Airlock extends Location{
         }
         if (!hasSpaceSuit()){
             Game.status = Status.DIED;
-            if (decompressed){;
-                return door_DecompressedStillWithoutSuitDeath;
-            }
             return door_CompressedFlungWithoutSuitDeath;
         }
         if (!decompressed){

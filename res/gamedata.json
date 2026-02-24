@@ -168,20 +168,6 @@
       "neighbours": []
     },
     {
-      "id": "location_airlock",
-      "name": "Airlock",
-      "description": "Small chamber with space suits, a button to evacuate the air and a lever to open the airlock.",
-      "stored": [
-        {
-          "id": "item_space_suit",
-          "name": "space suit",
-          "description": "Developed by the finest engineers above the age of 9."
-        }
-      ],
-      "neighboursId": ["location_hall_south", "location_ext_airlock"],
-      "neighbours": []
-    },
-    {
       "id": "location_boiler",
       "name": "Boiler",
       "description": "Dust is everywhere. Here is the boiler, fueled by coal, that powers the entire ship.",
@@ -264,5 +250,27 @@
       "neighbours": []
     }
 
-  ]
+  ],
+  "Airlock": {
+    "id": "location_airlock",
+    "name": "Airlock",
+    "description": "Small chamber with space suits, a button to evacuate the air and a lever to open the airlock.",
+    "stored": [
+      {
+        "id": "item_space_suit",
+        "name": "space suit",
+        "description": "Developed by the finest engineers above the age of 9."
+      }
+    ],
+    "neighboursId": ["location_hall_south", "location_ext_airlock"]
+  },
+  "neighbours": [],
+  "lever_NoSuitDeath": "You pull down the lever without a second thought. A large \"sss\" echos trough the room\nas the escaping air rolls out from the room, as well from your lungs. You start to suffocate.",
+  "lever_CompressionWhileDoorOpenedDeath": "You pull up the lever. Air floods the room and immediately escapes trough the open door\ndragging you also trough the door. You are flung into spacer, your vision is blurry\nfrom the rotating acceleration. You slowly run out of oxygen.",
+  "lever_Decompress": "You pull down the lever. A large \"sss\" echos trough the room as the air starts to disappear from the room.\nThere is no more air in the room.",
+  "lever_Compress": "You pull up the lever. A large \"sss\" echos trough the room as the air starts to fill in the room.\nThere is air again in the room.",
+  "door_Close": "You push the button. The outside door closes.",
+  "door_CompressedFlungWithoutSuitDeath": "You push the button without a second thought. The outside door opens.\nThe pressure change flings the air like a roaring thunder alongside you trough the door.\nYou feel slightly colder as the air escapes from your lungs and you suffocate.",
+  "door_CompressedFlungWithSuitDeath": "You push the button. The outside door opens.\nThe pressure change flings the air like a roaring thunder alongside you trough the door.\nYour vision is blurry from the rotating acceleration. You slowly run out of oxygen.",
+  "door_Open": "You push the button. The outside door opens."
 }

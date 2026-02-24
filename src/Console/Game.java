@@ -47,6 +47,7 @@ public class Game {
         }
 
         if (status.equals(Status.DIED)){
+            System.out.println("YOU DIE.");
             shouldExit = true;
         }
 
