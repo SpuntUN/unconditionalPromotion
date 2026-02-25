@@ -250,7 +250,7 @@
     "door_Close": "You push the button. The outside door closes.",
     "door_CompressedFlungWithoutSuitDeath": "You push the button without a second thought. The outside door opens.\nThe pressure change flings the air like a roaring thunder alongside you trough the door.\nYou feel slightly colder as the air escapes from your lungs and you suffocate.",
     "door_CompressedFlungWithSuitDeath": "You push the button. The outside door opens.\nThe pressure change flings the air like a roaring thunder alongside you trough the door.\nYour vision is blurry from the rotating acceleration. You slowly run out of oxygen.",
-    "door_Open": "You push the button. The outside door opens."
+    "door_Open": "You push the button. The outside door opens.",
   },
   "boiler": {
     "id": "location_boiler",

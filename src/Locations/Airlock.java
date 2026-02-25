@@ -4,6 +4,8 @@ import Console.Game;
 import Console.Status;
 import Rest.Player;
 
+import java.util.ArrayList;
+
 public class Airlock extends Location{
 
     private Player player;
@@ -17,6 +19,8 @@ public class Airlock extends Location{
     private String door_CompressedFlungWithoutSuitDeath;
     private String door_CompressedFlungWithSuitDeath;
     private String door_Open;
+    private ArrayList<Location> OpenedLocations;
+    private ArrayList<Location> ClosedLocations;
 
 
 
@@ -68,6 +72,7 @@ public class Airlock extends Location{
     private String pushButton(){
         if (doorOpen){
             doorOpen = false;
+            removeOutsideLocation();
             return door_Close;
         }
         if (!hasSpaceSuit()){
@@ -79,7 +84,16 @@ public class Airlock extends Location{
             return door_CompressedFlungWithSuitDeath;
         }
         doorOpen = true;
+        addOutsideLocation();
         return door_Open;
+    }
+
+    private void addOutsideLocation(){
+        neighbours = OpenedLocations;
+    }
+
+    private void removeOutsideLocation(){
+        neighbours = ClosedLocations;
     }
 
     private boolean hasSpaceSuit(){
@@ -88,6 +102,14 @@ public class Airlock extends Location{
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    public void setOpenedLocations(ArrayList<Location> openedLocations) {
+        this.OpenedLocations = openedLocations;
+    }
+
+    public void setClosedLocations(ArrayList<Location> closedLocations) {
+        ClosedLocations = closedLocations;
     }
 }
 

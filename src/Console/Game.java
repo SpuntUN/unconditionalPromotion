@@ -73,11 +73,18 @@ public class Game {
      */
     private void neighboursInit(){
         gameData.airlock.setPlayer(player);
+        gameData.airlock.setOpenedLocations(gameData.airlock.getNeighbours());
+        gameData.airlock.getNeighbours().remove(gameData.findLocation("location_ext_airlock"));
+        gameData.airlock.setClosedLocations(gameData.airlock.getNeighbours());
         gameData.locations.add(gameData.airlock);
 
         gameData.boiler.setPlayer(player);
         gameData.boiler.setQuestManager(questManager);
         gameData.locations.add(gameData.boiler);
+
+        gameData.bridge.setQuestManager(questManager);
+        gameData.bridge.setSc(sc);
+        gameData.locations.add(gameData.bridge);
 
         for (Location l : gameData.locations){
             for (String neighbourId : l.getNeighboursId()){

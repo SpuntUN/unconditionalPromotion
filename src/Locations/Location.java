@@ -10,7 +10,7 @@ public class Location implements Usable {
     private String description;
     private ArrayList<Item> stored;
     private ArrayList<String> neighboursId;
-    private ArrayList<Location> neighbours;
+    protected ArrayList<Location> neighbours;
 
 
     public Location(String id, String name, String description, ArrayList<String> neighboursId) {
