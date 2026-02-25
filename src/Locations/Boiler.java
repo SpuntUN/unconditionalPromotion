@@ -12,12 +12,12 @@ public class Boiler extends Location{
 
     @Override
     public String use(String command){
-        if (!player.getLocation().findItem(command).getId().equals("item_bag_of_coal")){
-            return null;
+        if (command.equals("coal") && player.getInventory().findItem("coal") != null){
+            player.getInventory().remove(player.getInventory().findItem(command));
+            questManager.setBoilerQuest(true);
+            return questDone;
         }
-        player.getInventory().remove(player.getLocation().findItem(command));
-        questManager.setBoilerQuest(true);
-        return questDone;
+        return null;
     }
 
     public void setPlayer(Player player){

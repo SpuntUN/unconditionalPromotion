@@ -20,8 +20,7 @@ public class Airlock extends Location{
     private String door_CompressedFlungWithoutSuitDeath;
     private String door_CompressedFlungWithSuitDeath;
     private String door_Open;
-    private ArrayList<Location> OpenedLocations;
-    private ArrayList<Location> ClosedLocations;
+    private Location exterior;
     private QuestManager questManager;
 
 
@@ -77,7 +76,7 @@ public class Airlock extends Location{
     private String pushButton(){
         if (doorOpen){
             doorOpen = false;
-            removeOutsideLocation();
+            removeExterior();
             return door_Close;
         }
         if (!hasSpaceSuit()){
@@ -89,16 +88,16 @@ public class Airlock extends Location{
             return door_CompressedFlungWithSuitDeath;
         }
         doorOpen = true;
-        addOutsideLocation();
+        addExterior();
         return door_Open;
     }
 
-    private void addOutsideLocation(){
-        neighbours = OpenedLocations;
+    private void addExterior(){
+        neighbours.add(exterior);
     }
 
-    private void removeOutsideLocation(){
-        neighbours = ClosedLocations;
+    private void removeExterior(){
+        neighbours.remove(exterior);
     }
 
     private boolean hasSpaceSuit(){
@@ -109,12 +108,8 @@ public class Airlock extends Location{
         this.player = player;
     }
 
-    public void setOpenedLocations(ArrayList<Location> openedLocations) {
-        this.OpenedLocations = openedLocations;
-    }
-
-    public void setClosedLocations(ArrayList<Location> closedLocations) {
-        ClosedLocations = closedLocations;
+    public void setExterior(Location exterior) {
+        this.exterior = exterior;
     }
 
     public void setQuestManager(QuestManager questManager) {

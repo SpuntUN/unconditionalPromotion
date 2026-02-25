@@ -21,14 +21,22 @@ public class Game {
     private QuestManager questManager;
     public static Scanner sc;
     private boolean shouldExit;
+    private boolean tryAgain = true;
     public static Status status;
 
     public void start(){
-        initialization();
-        System.out.println(gameData.intro);
-        while (!shouldExit){
-            gameLoop();
+        while(tryAgain){
+            initialization();
+            System.out.println(gameData.intro);
+            while (!shouldExit){
+                gameLoop();
+            }
+            System.out.println("Try again? Y/N");
+            if (!sc.nextLine().equalsIgnoreCase("y")){
+                tryAgain = false;
+            }
         }
+
     }
 
     /**
@@ -81,9 +89,7 @@ public class Game {
     private void neighboursInit(){
         gameData.airlock.setPlayer(player);
         gameData.airlock.setQuestManager(questManager);
-        gameData.airlock.setOpenedLocations(gameData.airlock.getNeighbours());
-        gameData.airlock.getNeighbours().remove(gameData.findLocation("location_ext_airlock"));
-        gameData.airlock.setClosedLocations(gameData.airlock.getNeighbours());
+        gameData.airlock.setExterior(gameData.findLocation("location_ext_airlock"));
         gameData.locations.add(gameData.airlock);
 
         gameData.boiler.setPlayer(player);

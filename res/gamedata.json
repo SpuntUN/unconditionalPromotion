@@ -1,6 +1,6 @@
 {
   "intro": "You are a low-level crew member on space station far from Earth.\nYou have been summoned to the bridge by the captain on a matter of grave importance.\nCaptain Richter: Ah, finally, I was getting thirsty. Please cadet, get me a cup of c-\nThe Captain catches him self by the chest and falls to the ground.\nCaptain Richter: C-cadet, you have to save us, get us to Earth.\nHe dies.",
-  "won": "You watch in awe as motors roar to full thrust and applies gentle pressure on your body.\nAfter few days you finally reach low Earth orbit.\n You did it, you got everyone home.",
+  "won": "You watch in awe as motors roar to full thrust and applies gentle pressure on your body.\nAfter few days you finally reach low Earth orbit.\nYou did it, you got everyone home.",
   "NPCs": [
     {
       "id": "npc_dead_captain",
@@ -141,14 +141,6 @@
       "neighbours": []
     },
     {
-      "id": "location_boiler",
-      "name": "Boiler",
-      "description": "Dust is everywhere. Here is the boiler, fueled by coal, that powers the entire ship.",
-      "stored": [],
-      "neighboursId": ["location_hall_south"],
-      "neighbours": []
-    },
-    {
       "id": "location_ext_airlock",
       "name": "Airlock Exterior",
       "description": "A narrow platform clinging to the hull of the ship. The orion constellation can be seen magnificently from here.",
@@ -219,7 +211,7 @@
   "airlock": {
     "id": "location_airlock",
     "name": "Airlock",
-    "description": "Small chamber with space suits, a button to evacuate the air and a lever to open the airlock.",
+    "description": "Small chamber with space suits, a lever to decompress the room. A button to open the airlock door.",
     "stored": [
       {
         "id": "item_space_suit",
@@ -227,7 +219,7 @@
         "description": "Developed by the finest engineers above the age of 9."
       }
     ],
-    "neighboursId": ["location_hall_south", "location_ext_airlock"],
+    "neighboursId": ["location_hall_south"],
     "neighbours": [],
     "lever_NoSuitDeath": "You pull down the lever without a second thought. A large \"sss\" echos trough the room\nas the escaping air rolls out from the room, as well from your lungs. You start to suffocate.",
     "lever_CompressionWhileDoorOpenedDeath": "You pull up the lever. Air floods the room and immediately escapes trough the open door\ndragging you also trough the door. You are flung into spacer, your vision is blurry\nfrom the rotating acceleration. You slowly run out of oxygen.",
@@ -262,7 +254,7 @@
   "storage": {
     "id": "location_storage",
     "name": "Storage",
-    "description": "Mountains upon mountains of creates lay here. All sorts off things are stored here.",
+    "description": "Mountains upon mountains of creates lay here. All sorts off things are stored here.\nA create with coal is here, but you can't get in it with just your bare hands.",
     "stored": [
       {
         "id": "item_bag_of_coal",
@@ -272,7 +264,7 @@
     ],
     "neighboursId": ["location_hall_south"],
     "neighbours": [],
-    "gotCoal": "You pull out your trust crowbar and open up the create. The crowbar breaks in half,\nbut not before you get in. There is a small back of coal. You take it",
+    "gotCoal": "You pull out your trusty crowbar and open up the create. The crowbar breaks in half,\nbut not before you get in. There is a small back of coal. You take it.",
     "done": false
   },
   "damaged": {
