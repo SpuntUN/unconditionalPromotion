@@ -22,6 +22,9 @@ public class Relinquish extends Command{
     public String execute(String command) {
         Inventory inv = player.getInventory();
         if (inv.findItem(command) != null){
+            if (command.equals("space suit")){
+                return "Can't remove space suit";
+            }
             Item removedItem = inv.findItem(command);
             inv.remove(removedItem);
             player.getLocation().addItem(removedItem);
