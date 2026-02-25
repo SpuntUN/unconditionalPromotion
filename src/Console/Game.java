@@ -72,6 +72,13 @@ public class Game {
      * @author Matěj Švec
      */
     private void neighboursInit(){
+        gameData.airlock.setPlayer(player);
+        gameData.locations.add(gameData.airlock);
+
+        gameData.boiler.setPlayer(player);
+        gameData.boiler.setQuestManager(questManager);
+        gameData.locations.add(gameData.boiler);
+
         for (Location l : gameData.locations){
             for (String neighbourId : l.getNeighboursId()){
                 l.addNeighbour(gameData.findLocation(neighbourId));

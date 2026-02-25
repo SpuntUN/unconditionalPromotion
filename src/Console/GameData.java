@@ -1,6 +1,7 @@
 package Console;
 
 import Locations.Airlock;
+import Locations.Boiler;
 import Locations.Location;
 import NPCs.NPC;
 import Rest.Item;
@@ -21,6 +22,7 @@ public class GameData {
     public ArrayList<NPC> NPCs;
     public ArrayList<Location> locations;
     public Airlock airlock;
+    public Boiler boiler;
 
     /**
      * Loads game data from a JSON file.

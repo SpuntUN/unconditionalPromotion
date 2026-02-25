@@ -12,6 +12,10 @@ public class Use extends Command {
 
     @Override
     public String execute(String command) {
-        return player.getLocation().use(command);
+        String response = player.getLocation().use(command);
+        if (response != null){
+            return response;
+        }
+        return "You couldn't find anything like \"" + command + "\" to use.";
     }
 }

@@ -31,7 +31,7 @@ public class Airlock extends Location{
         return switch (command) {
             case "lever" -> pullLever();
             case "button" -> pushButton();
-            default -> "You couldn't find anything like \"" + command + "\" to use.";
+            default -> null;
         };
     }
 
@@ -83,7 +83,7 @@ public class Airlock extends Location{
     }
 
     private boolean hasSpaceSuit(){
-        return player.getInventory().findItem("space suit").getId().equals("item_space_suit");
+        return player.getInventory().findItem("space suit") != null;
     }
 
     public void setPlayer(Player player) {
