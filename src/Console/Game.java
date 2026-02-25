@@ -73,6 +73,7 @@ public class Game {
      */
     private void neighboursInit(){
         gameData.airlock.setPlayer(player);
+        gameData.airlock.setQuestManager(questManager);
         gameData.airlock.setOpenedLocations(gameData.airlock.getNeighbours());
         gameData.airlock.getNeighbours().remove(gameData.findLocation("location_ext_airlock"));
         gameData.airlock.setClosedLocations(gameData.airlock.getNeighbours());

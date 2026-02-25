@@ -8,7 +8,7 @@ public class Location implements Usable {
     private String id;
     private String name;
     private String description;
-    private ArrayList<Item> stored;
+    protected ArrayList<Item> stored;
     private ArrayList<String> neighboursId;
     protected ArrayList<Location> neighbours;
 

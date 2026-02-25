@@ -1,9 +1,6 @@
 package Console;
 
-import Locations.Airlock;
-import Locations.Boiler;
-import Locations.Bridge;
-import Locations.Location;
+import Locations.*;
 import NPCs.NPC;
 import com.google.gson.Gson;
 
@@ -24,6 +21,7 @@ public class GameData {
     public Airlock airlock;
     public Boiler boiler;
     public Bridge bridge;
+    public Storage storage;
 
     /**
      * Loads game data from a JSON file.

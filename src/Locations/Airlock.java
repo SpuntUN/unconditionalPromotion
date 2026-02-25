@@ -1,6 +1,7 @@
 package Locations;
 
 import Console.Game;
+import Console.QuestManager;
 import Console.Status;
 import Rest.Player;
 
@@ -21,6 +22,7 @@ public class Airlock extends Location{
     private String door_Open;
     private ArrayList<Location> OpenedLocations;
     private ArrayList<Location> ClosedLocations;
+    private QuestManager questManager;
 
 
 
@@ -32,6 +34,9 @@ public class Airlock extends Location{
 
     @Override
     public String use(String command) {
+        if (!questManager.isHullOngoing()){
+            return "No need to use anything in here now";
+        }
         return switch (command) {
             case "lever" -> pullLever();
             case "button" -> pushButton();
@@ -110,6 +115,10 @@ public class Airlock extends Location{
 
     public void setClosedLocations(ArrayList<Location> closedLocations) {
         ClosedLocations = closedLocations;
+    }
+
+    public void setQuestManager(QuestManager questManager) {
+        this.questManager = questManager;
     }
 }
 
