@@ -10,3 +10,9 @@ Talk <NPC> - Initiates a dialogue
 Use <Item> - Uses an available item and or interacts with the environment.
 Inventory <> - Returns a list of items in inventory
 Exit <> Exits the game
+
+## Overview
+I am a Czech IT student, and I have made this with disdain and glee as my school project.
+
+## Installation
+Download JAR file and open it trough command line.
