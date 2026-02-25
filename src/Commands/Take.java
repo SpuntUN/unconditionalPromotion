@@ -1,10 +1,8 @@
 package Commands;
 
 import Locations.Location;
-import Rest.Item;
+import Items.Item;
 import Rest.Player;
-
-import java.util.ArrayList;
 
 public class Take extends Command {
 

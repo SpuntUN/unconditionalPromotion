@@ -2,9 +2,9 @@ package Console;
 
 import Locations.Airlock;
 import Locations.Boiler;
+import Locations.Bridge;
 import Locations.Location;
 import NPCs.NPC;
-import Rest.Item;
 import com.google.gson.Gson;
 
 import java.io.InputStream;
@@ -23,6 +23,7 @@ public class GameData {
     public ArrayList<Location> locations;
     public Airlock airlock;
     public Boiler boiler;
+    public Bridge bridge;
 
     /**
      * Loads game data from a JSON file.

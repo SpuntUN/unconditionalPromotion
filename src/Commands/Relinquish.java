@@ -1,8 +1,7 @@
 package Commands;
 
-import Locations.Location;
-import Rest.Inventory;
-import Rest.Item;
+import Items.Inventory;
+import Items.Item;
 import Rest.Player;
 
 public class Relinquish extends Command{

@@ -1,6 +1,4 @@
-package Rest;
-
-import Locations.Location;
+package Items;
 
 public class Item {
     private String id;

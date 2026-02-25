@@ -3,7 +3,7 @@
     {
       "id": "npc_dead_captain",
       "name": "the captain",
-      "description": "Captain Richter lays dead upon the floor.",
+      "description": "Captain Richter lays dead upon the floor. He has a note sewn to his uniform. Should use it.",
       "locationId": "location_bridge",
       "canMove": false
     },
@@ -79,20 +79,6 @@
     }
   ],
   "locations": [
-    {
-      "id": "location_bridge",
-      "name": "Bridge",
-      "description": "A clean room full of computers and one large window. Also the captain is still dead.",
-      "stored": [
-        {
-          "id": "item_magazine",
-          "name": "magazine \"Interstellar Navigation for Dummies\"",
-          "description": "The bare minimum of astrodynamics a kindergarten can ask for."
-        }
-      ],
-      "neighboursId": ["location_hall_north"],
-      "neighbours": []
-    },
     {
       "id": "location_hall_north",
       "name": "North Hall",
@@ -274,5 +260,15 @@
     "neighboursId": ["location_hall_south"],
     "neighbours": [],
     "questDone": "You spill the contents of the bag inside the boiler. With majestic golden colors machines around it are put into motion."
+  },
+  "bridge": {
+    "id": "location_bridge",
+    "name": "Bridge",
+    "description": "A clean room full of computers and one large window. Also the captain is still dead.",
+    "stored": [],
+    "neighboursId": ["location_hall_north"],
+    "neighbours": [],
+    "locked": true,
+    "note": "wasd"
   }
 }

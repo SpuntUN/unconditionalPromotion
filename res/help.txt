@@ -4,7 +4,7 @@ Commands:
     Relinquish <Item> - Drops said item onto the floor
     Look <> / <Item/NPC> - Describes current location if empty, or specific item or NPC
     Talk <NPC> - Initiates a dialogue
-    Use <Item> - Uses an available item
+    Use <Item> - Uses an available item and or interacts with the environment.
     Inventory <> - Returns a list of items in inventory
     Hint <> Gives a hint on what you should do
     Exit <> Exits the game

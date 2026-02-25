@@ -1,5 +1,6 @@
 package Rest;
 
+import Items.Inventory;
 import Locations.Location;
 
 public class Player {

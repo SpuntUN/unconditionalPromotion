@@ -1,6 +1,5 @@
 package Commands;
 
-import Rest.Inventory;
 import Rest.Player;
 
 public class InventoryCmd extends  Command{

@@ -1,6 +1,6 @@
 package Locations;
 
-import Rest.Item;
+import Items.Item;
 
 import java.util.ArrayList;
 

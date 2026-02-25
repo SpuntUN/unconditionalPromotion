@@ -1,7 +1,7 @@
 package Commands;
 
 import Locations.Location;
-import Rest.Item;
+import Items.Item;
 import Rest.Player;
 import junit.framework.TestCase;
 
