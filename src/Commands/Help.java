@@ -1,9 +1,6 @@
 package Commands;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * The Help class provides a command that displays helpful information
@@ -21,7 +18,11 @@ public class Help extends Command {
      */
     public Help() {
         helpStr = "";
-        try (BufferedReader br = new BufferedReader(new FileReader("res/help.txt"))) {
+        InputStream input = Help.class.getResourceAsStream("/help.txt");
+        if(input == null){
+            throw new RuntimeException("There is a problem with loading /help.txt");
+        }
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
             String line;
             while ((line = br.readLine()) != null) {
                 helpStr += line + "\n";

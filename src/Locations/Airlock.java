@@ -47,7 +47,7 @@ public class Airlock extends Location{
     /**
      * Triggers the lever's functionality depending on if the player has a suit on,
      * the room is decompressed and or the door.
-     * Can result in death, which is than handled in Class Game.
+     * Can result in death, which is then handled in Class Game.
      * @return String informing the player of successfully decompression or compression; or a successful death.
      */
     private String pullLever(){
@@ -116,5 +116,3 @@ public class Airlock extends Location{
         this.questManager = questManager;
     }
 }
-
-
