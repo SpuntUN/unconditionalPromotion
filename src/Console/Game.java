@@ -87,6 +87,9 @@ public class Game {
         gameData.bridge.setSc(sc);
         gameData.locations.add(gameData.bridge);
 
+        gameData.storage.setPlayer(player);
+        gameData.locations.add(gameData.storage);
+
         for (Location l : gameData.locations){
             for (String neighbourId : l.getNeighboursId()){
                 l.addNeighbour(gameData.findLocation(neighbourId));

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Location implements Usable {
     private String id;
     private String name;
-    private String description;
+    protected String description;
     protected ArrayList<Item> stored;
     private ArrayList<String> neighboursId;
     protected ArrayList<Location> neighbours;

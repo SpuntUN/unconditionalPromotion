@@ -211,14 +211,6 @@
       "stored": [],
       "neighboursId": ["location_ext_hall_north"],
       "neighbours": []
-    },
-    {
-      "id": "location_ext_lounge",
-      "name": "Recreation Area Exterior",
-      "description": "The meteoroid hit here. most of the hull on this side is blackened from dust.\nThere is a small indentation where the radiation shield has been stripped.\nNothing major, from that fact that Jim is currently developing cancer. Better seal it.",
-      "stored": [],
-      "neighboursId": ["location_ext_hall_north"],
-      "neighbours": []
     }
 
   ],
@@ -242,7 +234,7 @@
     "door_Close": "You push the button. The outside door closes.",
     "door_CompressedFlungWithoutSuitDeath": "You push the button without a second thought. The outside door opens.\nThe pressure change flings the air like a roaring thunder alongside you trough the door.\nYou feel slightly colder as the air escapes from your lungs and you suffocate.",
     "door_CompressedFlungWithSuitDeath": "You push the button. The outside door opens.\nThe pressure change flings the air like a roaring thunder alongside you trough the door.\nYour vision is blurry from the rotating acceleration. You slowly run out of oxygen.",
-    "door_Open": "You push the button. The outside door opens.",
+    "door_Open": "You push the button. The outside door opens."
   },
   "boiler": {
     "id": "location_boiler",
@@ -280,5 +272,15 @@
     "neighbours": [],
     "gotCoal": "You pull out your trust crowbar and open up the create. The crowbar breaks in half,\nbut not before you get in. There is a small back of coal. You take it",
     "done": false
+  },
+  "damaged": {
+    "id": "location_ext_lounge",
+    "name": "Recreation Area Exterior",
+    "description": "The meteoroid hit here. most of the hull on this side is blackened from dust.\nThere is a small indentation where the radiation shield has been stripped.\nNothing major, from that fact that Jim is currently developing cancer. Better seal it.",
+    "stored": [],
+    "neighboursId": ["location_ext_hall_north"],
+    "neighbours": [],
+    "sealed": "You carefully pullout a roll of duct tape and masterfully repair all the damages.",
+    "newDescription": "Most of the hull on this side is blackened from dust.\nThere is a small indentation where the radiation shield has been stripped. Few pieces of duct tape is where a tear used to be."
   }
 }
