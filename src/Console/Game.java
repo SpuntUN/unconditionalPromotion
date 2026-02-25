@@ -19,12 +19,13 @@ public class Game {
     private HashMap<String, Command> commands;
     private Player player;
     private QuestManager questManager;
-    private Scanner sc;
+    public static Scanner sc;
     private boolean shouldExit;
     public static Status status;
 
     public void start(){
         initialization();
+        System.out.println(gameData.intro);
         while (!shouldExit){
             gameLoop();
         }
@@ -46,8 +47,13 @@ public class Game {
             System.out.println("Unknown command: " + parts[0]);
         }
 
-        if (status.equals(Status.DIED)){
+        if (status == Status.DIED){
             System.out.println("YOU DIE.");
+            shouldExit = true;
+        }
+        if (status == Status.WON){
+            System.out.println(gameData.won);
+            System.out.println("YOU WON.");
             shouldExit = true;
         }
 
@@ -89,6 +95,10 @@ public class Game {
 
         gameData.storage.setPlayer(player);
         gameData.locations.add(gameData.storage);
+
+        gameData.damaged.setPlayer(player);
+        gameData.damaged.setQuestManager(questManager);
+        gameData.locations.add(gameData.damaged);
 
         for (Location l : gameData.locations){
             for (String neighbourId : l.getNeighboursId()){

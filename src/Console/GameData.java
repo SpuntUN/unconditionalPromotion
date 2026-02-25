@@ -16,12 +16,15 @@ import java.util.ArrayList;
  */
 public class GameData {
 
+    public String intro;
+    public String won;
     public ArrayList<NPC> NPCs;
     public ArrayList<Location> locations;
     public Airlock airlock;
     public Boiler boiler;
     public Bridge bridge;
     public Storage storage;
+    public Damaged damaged;
 
     /**
      * Loads game data from a JSON file.

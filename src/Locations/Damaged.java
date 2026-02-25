@@ -20,4 +20,12 @@ public class Damaged extends Location{
         }
         return null;
     }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public void setQuestManager(QuestManager questManager) {
+        this.questManager = questManager;
+    }
 }

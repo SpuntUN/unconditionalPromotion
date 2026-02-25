@@ -1,4 +1,6 @@
 {
+  "intro": "You are a low-level crew member on space station far from Earth.\nYou have been summoned to the bridge by the captain on a matter of grave importance.\nCaptain Richter: Ah, finally, I was getting thirsty. Please cadet, get me a cup of c-\nThe Captain catches him self by the chest and falls to the ground.\nCaptain Richter: C-cadet, you have to save us, get us to Earth.\nHe dies.",
+  "won": "You watch in awe as motors roar to full thrust and applies gentle pressure on your body.\nAfter few days you finally reach low Earth orbit.\n You did it, you got everyone home.",
   "NPCs": [
     {
       "id": "npc_dead_captain",
