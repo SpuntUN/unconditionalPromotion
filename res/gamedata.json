@@ -269,6 +269,8 @@
     "neighboursId": ["location_hall_north"],
     "neighbours": [],
     "locked": true,
-    "note": "wasd"
+    "password": "RICH123",
+    "noteMs": "You look at the note at his uniform. It seems to be the coordinates...\nNOW YOU KNOW COORDINATES TO EARTH",
+    "meteoroidsMs": "PREPARING FOR THRUST...\n...\n...\nMETEOROID SWARM IMMINENT, CANCELING THRUST\n\nThe entire ship violently shakes as tiny pellets hit the hull. The display flashes again\n\nHULL REPAIR NEEDED"
   }
 }
