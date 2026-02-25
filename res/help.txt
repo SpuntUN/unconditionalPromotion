@@ -6,5 +6,4 @@ Commands:
     Talk <NPC> - Initiates a dialogue
     Use <Item> - Uses an available item and or interacts with the environment.
     Inventory <> - Returns a list of items in inventory
-    Hint <> Gives a hint on what you should do
     Exit <> Exits the game

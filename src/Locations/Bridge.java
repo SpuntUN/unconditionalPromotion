@@ -11,7 +11,6 @@ public class Bridge extends Location{
     private boolean locked;
     private String password;
     private QuestManager questManager;
-    private Scanner sc;
     private String noteMs;
     private String meteoroidsMs;
 
@@ -26,14 +25,14 @@ public class Bridge extends Location{
 
     private String Computer(){
         System.out.println("Password: ");
-        if (!sc.nextLine().equals(password)){
+        if (!Game.sc.nextLine().equals(password)){
             return "Wrong password, try again later...";
         }
         boolean logged = true;
         while (logged){
             System.out.println("Welcome Captain:\n1)Fly Home\n2)Set Coordinates\n3)Log out");
             System.out.println(">>");
-            switch (sc.nextLine()){
+            switch (Game.sc.nextLine()){
                 case "1":
                     flyHome();
                     break;
@@ -56,7 +55,7 @@ public class Bridge extends Location{
     }
 
     private void flyHome(){
-        if (questManager.isBoilerQuest()){
+        if (!questManager.isBoilerQuest()){
             System.out.println("No fuel in the boiler");
             return;
         }
@@ -101,7 +100,4 @@ public class Bridge extends Location{
         this.questManager = questManager;
     }
 
-    public void setSc(Scanner sc) {
-        this.sc = sc;
-    }
 }

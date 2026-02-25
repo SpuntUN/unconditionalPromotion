@@ -50,7 +50,7 @@ public class Location implements Usable {
 
     @Override
     public String use(String command) {
-        return "";
+        return null;
     }
 
     public boolean addItem(Item item){

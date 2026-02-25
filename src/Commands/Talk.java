@@ -1,5 +1,6 @@
 package Commands;
 
+import Console.Game;
 import NPCs.Dialogue;
 import NPCs.NPC;
 import Rest.Player;
@@ -11,14 +12,12 @@ public class Talk extends Command{
 
     private Player player;
     private ArrayList<NPC> NPCs;
-    private Scanner sc;
     private Dialogue currentDialogue;
 
 
-    public Talk(Player player, ArrayList<NPC> NPCs, Scanner sc) {
+    public Talk(Player player, ArrayList<NPC> NPCs) {
         this.player = player;
         this.NPCs = NPCs;
-        this.sc = sc;
         currentDialogue = null;
     }
 
@@ -57,7 +56,7 @@ public class Talk extends Command{
 
             int choice;
             try {
-                choice = Integer.parseInt(sc.nextLine());
+                choice = Integer.parseInt(Game.sc.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println("Enter a valid number");
                 continue;

@@ -250,7 +250,7 @@
   "bridge": {
     "id": "location_bridge",
     "name": "Bridge",
-    "description": "A clean room full of computers and one large window. Also the captain is still dead.",
+    "description": "A clean room full of computers and one large window. THE computer is in the middle. Also the captain is still dead.",
     "stored": [],
     "neighboursId": ["location_hall_north"],
     "neighbours": [],

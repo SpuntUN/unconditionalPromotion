@@ -61,14 +61,15 @@ public class Game {
 
 
     private void initialization(){
+        questManager = new QuestManager();
         status = Status.NORMAL;
         sc = new Scanner(System.in);
         shouldExit = false;
         player = new Player();
 
         gameData = GameData.loadGameDataFromResources("/gamedata.json");
-        player.setLocation(gameData.findLocation("location_canteen"));
         neighboursInit();
+        player.setLocation(gameData.findLocation("location_bridge"));
         commandInit();
     }
 
@@ -90,7 +91,6 @@ public class Game {
         gameData.locations.add(gameData.boiler);
 
         gameData.bridge.setQuestManager(questManager);
-        gameData.bridge.setSc(sc);
         gameData.locations.add(gameData.bridge);
 
         gameData.storage.setPlayer(player);
@@ -119,7 +119,7 @@ public class Game {
         commands.put("exit", new Exit());
         commands.put("help", new Help());
         commands.put("relinquish", new Relinquish(player));
-        commands.put("talk", new Talk(player, gameData.NPCs, sc));
+        commands.put("talk", new Talk(player, gameData.NPCs));
         commands.put("use", new Use(player));
     }
 
