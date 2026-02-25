@@ -23,6 +23,13 @@ public class Bridge extends Location{
         };
     }
 
+    /**
+     * This method prompts the user for a password. Then it will ask him three questions where she chooses by number.
+     * A switch statment leads to methods that decides if he wins, loses, or nothing happens.
+     * @return A message indicating the outcome of the interaction. It could return:
+     *         - A message indicating the password attempt was incorrect.
+     *         - A confirmation message indicating successful log out or conclusion of computer interaction.
+     */
     private String Computer(){
         System.out.println("Password: ");
         if (!Game.sc.nextLine().equals(password)){
@@ -54,6 +61,9 @@ public class Bridge extends Location{
         return "You get up from the computer";
     }
 
+    /**
+     * This method decides if player can fly home and end the game.
+     */
     private void flyHome(){
         if (!questManager.isBoilerQuest()){
             System.out.println("No fuel in the boiler");
@@ -77,6 +87,14 @@ public class Bridge extends Location{
         }
     }
 
+    /**
+     * This method handles setting coordinates. It interacts with the questManager.
+     * - If the coordinate quest is already completed, it informs the user and exits.
+     * - If the coordinate quest is ongoing, it informs the user, updates the questManager to mark
+     *   the quest as completed, and sets the coordinates.
+     * - If the coordinate quest is not ongoing, it informs the user that they do not have the required information
+     *   to set the coordinates.
+     */
     private void coordinates(){
         if (questManager.isCoordQuest()){
             System.out.println("You have already set the coordinates");

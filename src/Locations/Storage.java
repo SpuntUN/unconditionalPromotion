@@ -8,9 +8,12 @@ public class Storage extends Location{
     private String gotCoal;
     private boolean done;
 
+    /**
+     * @param command user set command, it is being checked if it is a crowbar.
+     * @return Either a message of putting coal in a boiler or that nothing happened (null)
+     */
     @Override
     public String use(String command) {
-
         if (command.equals("crowbar") && player.getInventory().findItem("crowbar") != null && !done){
             done = true;
             player.getInventory().remove(player.getInventory().findItem("crowbar"));
